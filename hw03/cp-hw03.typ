@@ -3,6 +3,18 @@
 #import "@preview/cetz:0.4.2" as cetz: canvas, draw, tree
 #import fletcher.shapes: ellipse
 
+#set par(justify: true)
+#set page(
+  footer: context [
+    #set align(center)
+    #set text(10pt)
+    #counter(page).display() \
+    #set text(8pt)
+    本文档使用 Typst 排版创建，源代码存放于 #link("https://github.com/asynkio/scnu-cp-2025-hw")，根据
+    Apache-2.0 许可证发布。
+  ],
+)
+
 #show: project.with(
   title: "CP HW03",
   authors: (
