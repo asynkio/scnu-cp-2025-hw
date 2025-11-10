@@ -2,7 +2,7 @@
 #import "@local/hw-template:1.0.0": *
 
 #show: project.with(
-  title: "CP HW02",
+  title: "CP HW01",
   authors: (
     (
       name: "Aksel Shen",

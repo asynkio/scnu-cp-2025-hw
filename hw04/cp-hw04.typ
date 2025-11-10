@@ -16,7 +16,7 @@
 )
 
 #show: project.with(
-  title: "CP HW03",
+  title: "CP HW04",
   authors: (
     (
       name: "Aksel Shen",
@@ -24,7 +24,7 @@
       affiliation: "South China Normal University",
     ),
   ),
-  date: "2025-11-3",
+  date: "2025-11-10",
 )
 
 以下文法中的大写字母为非终结符，小写字母为终结符，$S$ 为起始符号。
