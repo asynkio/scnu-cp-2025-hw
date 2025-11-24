@@ -63,8 +63,8 @@ $
 #let gr1 = gradient.linear(
   space: oklch,
   angle: 119deg,
-  rgb("#FC5C7D11"),
-  rgb("#6A82FB91"),
+  rgb("#FC5C7D").lighten(89%),
+  rgb("#6A82FB").lighten(30%),
 )
 
 #let gr2 = gradient.linear(
@@ -214,4 +214,4 @@ $
 
   SLR(1) 文法要求在存在归约-归约冲突的状态下，$"follow"(A) inter "follow"(B) = emptyset$。
   而状态 0 中，$"follow"(A) = {a, b}$，$"follow"(B) = {a, b}$，$"follow"(A) inter "follow"(B) = {a, b} != emptyset$，
-  因此该文法不是 SLR(1) 文法。
+  因此，该文法不是 SLR(1) 文法。
