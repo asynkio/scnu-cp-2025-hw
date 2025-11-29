@@ -1,0 +1,6 @@
+//hello world
+int main()
+{
+  int _i = 2025;
+  printf("Hello world %d", i);
+}

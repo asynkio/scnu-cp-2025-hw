@@ -1,0 +1,18 @@
+2 KwInt int
+2 KwMain main
+2 ParenL (
+2 ParenR )
+3 BraceL {
+4 KwInt int
+4 Ident _i
+4 Assign =
+4 IntConst(2025) 2025
+4 Semicn ;
+5 KwPrintf printf
+5 ParenL (
+5 StrConst("Hello world %d") "Hello world %d"
+5 Comma ,
+5 Ident i
+5 ParenR )
+5 Semicn ;
+6 BraceR }
