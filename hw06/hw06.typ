@@ -419,3 +419,30 @@ $
 
 2. 如果需要计算输入串的括号嵌套的深度，可以定义一个属性 deep，表示括号嵌套的深度。
 请写出计算 deep 的属性文法。
+
+== 解
+
+#let npar = math.mono("npar")
+#let deep = math.mono("deep")
+
+1.
+#figure(table(
+  columns: (7em, 15em),
+  align: left,
+  [Production], [Semantic Rule],
+  $S -> (L)$, $S.npar = L.npar + 1$,
+  $S -> a$, $S.npar = 0$,
+  $L -> L_1 , S$, $L.npar = L_1.npar + S.npar$,
+  $L -> S$, $L.npar = S.npar$,
+))
+
+2.
+#figure(table(
+  columns: (7em, 15em),
+  align: left,
+  [Production], [Semantic Rule],
+  $S -> (L)$, $S.deep = L.deep + 1$,
+  $S -> a$, $S.deep = 0$,
+  $L -> L_1 , S$, $L.deep = max(L_1.deep, space S.deep)$,
+  $L -> S$, $L.deep = S.deep$,
+))
