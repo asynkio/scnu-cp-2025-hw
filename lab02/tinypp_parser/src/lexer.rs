@@ -58,7 +58,7 @@ enum Token {
     #[token(":=")]
     Assign,
 
-    #[regex(r"[_a-zA-Z][a-zA-Z]*")]
+    #[regex(r"[a-zA-Z]+")]
     Ident,
 
     #[regex(r"[0-9]+", |lex| lex.slice().parse::<isize>().unwrap())]
