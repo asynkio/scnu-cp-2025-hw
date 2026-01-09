@@ -18,17 +18,20 @@ cargo build --release
 
 ## Usage
 
-### Parse a Tiny++ program from stdin:
+### Parse a Tiny++ program from stdin
+
 ```bash
 cargo run --release < program.tpp
 ```
 
-### Parse a Tiny++ program from a file:
+### Parse a Tiny++ program from a file
+
 ```bash
 cargo run --release < tests/test_factorial.tpp
 ```
 
-### Or use the compiled binary:
+### Or use the compiled binary
+
 ```bash
 ./target/release/tinypp_parser < program.tpp
 ```
@@ -36,6 +39,7 @@ cargo run --release < tests/test_factorial.tpp
 ## Language Support
 
 ### Statements
+
 - `if ... then ... end`
 - `if ... then ... else ... end`
 - `while ... do ... enddo`
@@ -49,11 +53,13 @@ cargo run --release < tests/test_factorial.tpp
 - `identifier -= expression`
 
 ### Operators
+
 **Arithmetic:** `+`, `-`, `*`, `/`, `%` (modulo), `^` (power)  
 **Comparison:** `<`, `=`, `>`, `<=`, `>=`, `<>` (not equal)  
 **Assignment:** `:=`, `+=`, `-=`
 
 ### Other Features
+
 - Comments: `{comment text}`
 - Proper operator precedence
 - Parenthesized expressions
@@ -63,19 +69,22 @@ cargo run --release < tests/test_factorial.tpp
 
 A comprehensive test suite is available in the `tests/` directory.
 
-### Run all tests:
+### Run all tests
+
 ```bash
 cd tests
 ./run_tests.sh
 ```
 
-### Run a single test:
+### Run a single test
+
 ```bash
 cd tests
 ./run_single_test.sh test_basic
 ```
 
-### Available tests:
+### Available tests
+
 - `test_basic` - Basic assignment and arithmetic
 - `test_if_else` - Conditional statements
 - `test_while` - While loops
@@ -93,6 +102,7 @@ See `tests/TEST_SUMMARY.md` for detailed coverage information.
 ## Example
 
 **Input (program.tpp):**
+
 ```
 read n;
 fact := 1;
@@ -103,6 +113,7 @@ write fact
 ```
 
 **Output (AST):**
+
 ```
 Program {
     statements: [
@@ -149,7 +160,3 @@ tinypp_parser/
 ## Dependencies
 
 - `logos` 0.16.0 - Lexical analysis library
-
-## License
-
-Educational project for compiler lab course.
