@@ -1,0 +1,7 @@
+{Test if-then-else statement}
+read x;
+if x > 0 then
+  write x
+else
+  write 0
+end
