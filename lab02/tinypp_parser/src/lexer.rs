@@ -1,9 +1,9 @@
 use logos::Logos;
 
-#[derive(Logos, Debug, PartialEq)]
+#[derive(Logos, Debug, PartialEq, Clone)]
 #[logos(skip r"[ \t\n\f]+")] // Skip whitespace
 #[logos(skip r"\{[^{}]*\}")] // Skip comments enclosed in {}
-enum Token {
+pub enum Token {
     #[token("if")]
     KwIf,
 
@@ -106,4 +106,24 @@ enum Token {
 
     #[token("<>")]
     Neq,
+}
+
+pub struct Lexer<'a> {
+    inner: logos::Lexer<'a, Token>,
+}
+
+impl<'a> Lexer<'a> {
+    pub fn new(input: &'a str) -> Self {
+        Lexer {
+            inner: Token::lexer(input),
+        }
+    }
+
+    pub fn next(&mut self) -> Option<Token> {
+        self.inner.next().and_then(|r| r.ok())
+    }
+
+    pub fn slice(&self) -> &'a str {
+        self.inner.slice()
+    }
 }
