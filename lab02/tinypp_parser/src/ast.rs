@@ -1,7 +1,9 @@
+#[derive(Debug)]
 pub struct Program {
     pub statements: Vec<Statement>,
 }
 
+#[derive(Debug)]
 pub enum Statement {
     If {
         condition: Expression,
@@ -43,12 +45,14 @@ pub enum Statement {
     },
 }
 
+#[derive(Debug)]
 pub enum AssignOp {
     Assign,      // :=
     PlusAssign,  // +=
     MinusAssign, // -=
 }
 
+#[derive(Debug)]
 pub enum Expression {
     Binary {
         left: Box<Expression>,
@@ -59,6 +63,7 @@ pub enum Expression {
     IntConst(isize),
 }
 
+#[derive(Debug)]
 pub enum BinaryOp {
     Lt,
     Eq,
