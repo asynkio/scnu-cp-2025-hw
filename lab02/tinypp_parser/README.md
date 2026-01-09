@@ -76,13 +76,6 @@ cd tests
 ./run_tests.sh
 ```
 
-### Run a single test
-
-```bash
-cd tests
-./run_single_test.sh test_basic
-```
-
 ### Available tests
 
 - `test_basic` - Basic assignment and arithmetic
@@ -104,17 +97,20 @@ See `tests/TEST_SUMMARY.md` for detailed coverage information.
 **Input (program.tpp):**
 
 ```
+
 read n;
 fact := 1;
 for i := 1 to n
   fact := fact * i
 enddo;
 write fact
+
 ```
 
 **Output (AST):**
 
 ```
+
 Program {
     statements: [
         Read { variable: "n" },
@@ -139,11 +135,13 @@ Program {
         Write { value: Id("fact") }
     ]
 }
+
 ```
 
 ## Project Structure
 
 ```
+
 tinypp_parser/
 ├── src/
 │   ├── main.rs      # Entry point, reads input and outputs AST
@@ -155,6 +153,7 @@ tinypp_parser/
 │   ├── run_tests.sh # Test runner
 │   └── README.md    # Test documentation
 └── Cargo.toml       # Dependencies
+
 ```
 
 ## Dependencies

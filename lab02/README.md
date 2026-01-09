@@ -40,13 +40,6 @@ cd tinypp_parser/tests
 ./run_tests.sh
 ```
 
-To run a single test:
-
-```bash
-cd tinypp_parser/tests
-./run_single_test.sh test_factorial
-```
-
 The test suite includes 11 comprehensive test cases covering various language features.
 
 ## Report

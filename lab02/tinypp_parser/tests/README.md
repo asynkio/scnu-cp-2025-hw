@@ -17,22 +17,16 @@ This directory contains test cases for the Tiny++ parser.
 
 ## Running Tests
 
-### Run all tests:
 ```bash
 cd tests
 chmod +x run_tests.sh
 ./run_tests.sh
 ```
 
-### Run a single test:
-```bash
-cd tinypp_parser
-cargo run --release < tests/test_basic.tpp
-```
-
 ## Expected Behavior
 
 Each test should parse successfully and output a syntax tree structure showing:
+
 - Program structure
 - Statement types
 - Expression trees with proper operator precedence
@@ -41,7 +35,7 @@ Each test should parse successfully and output a syntax tree structure showing:
 ## Tiny++ Language Features Tested
 
 - **Statements**: if, while, for, repeat, read, write, assign
-- **Operators**: 
+- **Operators**:
   - Arithmetic: +, -, *, /, %, ^
   - Comparison: <, =, >, <=, >=, <>
   - Assignment: :=, +=, -=
